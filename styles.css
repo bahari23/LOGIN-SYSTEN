@@ -1,0 +1,102 @@
+/* styles.css - CSS Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+    text-align: center;
+}
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 50%;
+    border-radius: 15px;
+    text-align: center;
+}
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+    
+button:hover {
+    background-color:red;
+}
+
+body{
+    background-color: blanchedalmond;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    border: 5px solid;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    background-color: white; /* Optional: to make the form stand out */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Optional: adds a slight shadow */
+    border-radius: 10px; /* Optional: rounded corners */
+    text-align: center;
+    animation-name: bordercolor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes bordercolor {
+    0% {
+        border-color: red;
+    }
+    20% {
+        border-color: blue;
+    }
+    40% {
+        border-color: green;
+    }
+    60% {
+        border-color: yellow;
+    }
+    80% {
+        border-color: red;
+    }
+    100% {
+        border-color: blue;
+    }
+}
+/* Center the dashboard content */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height */
+    text-align: center;
+}
+
+/* Style the logout button */
+.logout-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: red;
+}
+
+        
