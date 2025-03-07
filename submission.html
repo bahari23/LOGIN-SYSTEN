@@ -1,0 +1,30 @@
+<!-- submission.html - Submission Form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateForm() {
+            let content = document.forms["submissionForm"]["content"].value;
+            if (content.trim() === "") {
+                alert("Submission content cannot be empty.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Submit Your Data</h2>
+        <form name="submissionForm" action="submit.php" method="POST" onsubmit="return validateForm()">
+            <textarea name="content" placeholder="Enter your submission here..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <a href="dashboard.php" class="back-button">Back to Dashboard</a>
+    </div>
+</body>
+</html>
