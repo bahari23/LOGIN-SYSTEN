@@ -21,7 +21,16 @@ try {
         password VARCHAR(255) NOT NULL
     )");
     
-    echo "Database and tables created successfully.";
+    // Create submissions table
+    $pdo->exec("CREATE TABLE IF NOT EXISTS submissions (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        user_id INT NOT NULL,
+        content TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    )");
+
+    echo "";
 } catch (PDOException $e) {
     die("Database error: " . $e->getMessage());
 }
