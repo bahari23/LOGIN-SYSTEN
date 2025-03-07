@@ -1,5 +1,5 @@
 <?php
-// register.php - User Registration
+
 require 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $userExists = $stmt->fetchColumn();
 
     if ($userExists) {
-        echo "ERROR!!: USERNAME ALREADY EXIST.  PLEASE USE ANOTHER USERNAME !!.";
+        echo "";
     } else {
         // Insert new user
         $stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
